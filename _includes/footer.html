@@ -1,0 +1,28 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <div class="wrapper">
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <div class="footer-col-wrapper">
+      {%- for column in site.footer.columns -%}
+      <div class="footer-col footer-col-{{ forloop.index }}">
+        <p><strong>{{ column.heading | escape }}</strong></p>
+        <ul class="contact-list">
+          {%- for link in column.links -%}
+          <li>
+            {%- if link.url contains "://" -%}
+            <a href="{{ link.url }}">{{ link.title | escape }}</a>
+            {%- else -%}
+            <a href="{{ link.url | relative_url }}">{{ link.title | escape }}</a>
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endfor -%}
+      <div class="footer-col footer-col-3">
+        <p>{{ site.footer.note | escape }}</p>
+        <p>&copy; {{ site.time | date: "%Y" }} <a href="{{ site.author.url }}">{{ site.author.name | escape }}</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
