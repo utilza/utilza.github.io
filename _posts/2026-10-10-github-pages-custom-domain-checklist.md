@@ -4,7 +4,7 @@ title: "Moving a GitHub Pages site to a custom domain: what I check before launc
 description: "DNS records, HTTPS, redirects, image weight, favicons, share previews, and sitemaps for a GitHub Pages site, with the commands and free tools to check each one."
 ---
 
-GitHub Pages hosts a static site for free at `utilza.github.io`. Putting it on your own domain takes a few settings, but the problems tend to show up after launch: a friend in another country still sees the old site, the browser warns about the certificate, a shared link has no preview image, or the home page crawls on a phone.
+GitHub Pages hosts a static site for free at `username.github.io`. Putting it on your own domain takes a few settings, but the problems tend to show up after launch: a friend in another country still sees the old site, the browser warns about the certificate, a shared link has no preview image, or the home page crawls on a phone.
 
 I go through the steps below before I tell anyone a site is live.
 
