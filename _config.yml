@@ -1,8 +1,91 @@
+# Site
 title: Utilza Notes
-description: Guides on DNS, HTTPS, and shipping small websites.
-theme: minima
+description: >-
+  Practical guides on DNS, HTTPS, APIs, and the small server tasks
+  that eat a developer's afternoon. Written by the Utilza team.
 url: "https://utilza.github.io"
+baseurl: ""
+lang: en
+timezone: UTC
+
+# Used by jekyll-seo-tag for structured data and the RSS feed
+author:
+  name: Utilza Team
+  url: https://utilza.app
+social:
+  name: Utilza
+  links:
+    - https://utilza.app
+    - https://github.com/utilza
+
+# Theme and plugins (all on the GitHub Pages allow list)
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# Home page shows the first paragraph of each post
+show_excerpts: true
+
+# Every post gets the post layout and an author line
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Utilza Team
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Header menu: read by _includes/header.html
+header_links:
+  - title: Articles
+    url: /
+  - title: About
+    url: /about/
+  - title: Free tools
+    url: https://utilza.app
+  - title: Utilza blog
+    url: https://utilza.app/blog
+
+# Footer: read by _includes/footer.html
+footer:
+  columns:
+    - heading: Tool categories
+      links:
+        - title: Developer tools
+          url: https://utilza.app/developer-tools
+        - title: DNS lookup tools
+          url: https://utilza.app/dns-tools
+        - title: Network tools
+          url: https://utilza.app/network-tools
+        - title: IP and subnet tools
+          url: https://utilza.app/internet-tools
+        - title: SEO tools
+          url: https://utilza.app/seo-tools
+        - title: Image tools
+          url: https://utilza.app/image-tools
+    - heading: Utilza
+      links:
+        - title: All free tools
+          url: https://utilza.app
+        - title: Utilza blog
+          url: https://utilza.app/blog
+        - title: RSS feed
+          url: /feed.xml
+        - title: GitHub
+          url: https://github.com/utilza
+  note: >-
+    Free browser tools for calculations, file conversion, DNS, and
+    development. No account needed.
+
+# Files Jekyll should not publish
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
